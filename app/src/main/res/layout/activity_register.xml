@@ -174,7 +174,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="149dp"
+        android:layout_marginBottom="169dp"
         android:text="Register" />
 
     <TextView
@@ -183,6 +183,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="75dp"
+        android:layout_marginBottom="142dp"
         android:text="Already an user? Login Here" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="38dp" />
 </RelativeLayout>
