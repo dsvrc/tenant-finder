@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                    {
                        if(password2.equals((snapshot.child(username2).child("password2").getValue(String.class))))
                        {
-                           System.out.println("boo");
+                           //System.out.println("boo");
                            Intent homeintent=new Intent(MainActivity.this,HomeActivity.class);
                            startActivity(homeintent);
                        }
