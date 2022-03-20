@@ -11,14 +11,16 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvproperties"
-        android:orientation="vertical"
         android:layout_width="383dp"
         android:layout_height="730dp"
-android:paddingTop="21dp"
         android:background="@drawable/horizontallayoutbg"
+        android:orientation="vertical"
+        android:paddingTop="21dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-<!--    </ScrollView>-->
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+    <!--    </ScrollView>-->
 </androidx.constraintlayout.widget.ConstraintLayout>

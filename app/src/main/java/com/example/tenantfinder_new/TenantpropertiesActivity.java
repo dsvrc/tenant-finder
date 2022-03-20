@@ -198,11 +198,11 @@ public TextView rent1,description1,address1,owner1,rent2,description2,address2,o
      address1=(TextView) itemView.findViewById(R.id.address1);
      owner1=(TextView) itemView.findViewById(R.id.owner1);
 
-//        building2=(ImageView) itemView.findViewById(R.id.building2);
-//        rent2=(TextView) itemView.findViewById(R.id.rent2);
-//        description2=(TextView) itemView.findViewById(R.id.description2);
-//        address2=(TextView) itemView.findViewById(R.id.address2);
-//        owner2=(TextView) itemView.findViewById(R.id.owner2);
+        building2=(ImageView) itemView.findViewById(R.id.building2);
+        rent2=(TextView) itemView.findViewById(R.id.rent2);
+        description2=(TextView) itemView.findViewById(R.id.description2);
+        address2=(TextView) itemView.findViewById(R.id.address2);
+        owner2=(TextView) itemView.findViewById(R.id.owner2);
     }
 
 }
@@ -225,70 +225,65 @@ public TextView rent1,description1,address1,owner1,rent2,description2,address2,o
     }
     @Override
     public void onBindViewHolder(TenantpropertiesActivity.ViewHolder holder, int position) {
-//    if(listmainsizetracker<=0)
-//    {
-//        return;
-//    }
-//        // Get the data model based on position
-//        System.out.println(position+"---");
-//        System.out.println(propertiesdata.size()+"**");
-//        if(position>0&&listmainsizetracker>0) {
-//            if (position == 1 && position + 2 <= holder.listmainsize) {
-//                position = position + 1;
-//            } else {
-//                if ((position * 2) + 1 <= holder.listmainsize) {
-//                    // System.out.println(position);
-//                    position = position * 2;
-//
-//                }
-//            }
-//        }
-//            if(listmainsizetracker>0){
+    if(listmainsizetracker<=0)
+    {
+        return;
+    }
+        // Get the data model based on position
+        System.out.println(position+"---");
+        System.out.println(propertiesdata.size()+"**");
+        if(position>0&&listmainsizetracker>0) {
+            if (position == 1 && position + 2 <= holder.listmainsize) {
+                position = position + 1;
+            } else {
+                if ((position * 2) + 1 <= holder.listmainsize) {
+                    // System.out.println(position);
+                    position = position * 2;
+
+                }
+            }
+        }
+            if(listmainsizetracker>0){
             List<String> propertiesdatasub = propertiesdata.get(position);
             if (propertiesdatasub.size() > 0) {
                 // Set item views based on your views and data model
-                ImageView imageviewbuilding1 = holder.building1;
-                TextView rent1 = holder.rent1;
-                rent1.setText(propertiesdatasub.get(0));
-                ImageView building11 = holder.building1;
-                building11.setImageResource(R.mipmap.download);
-                TextView rent11 = holder.rent1;
-                rent11.setText(propertiesdatasub.get(0));
-                TextView description11 = holder.description1;
-                description11.setText(propertiesdatasub.get(1));
-                TextView address11 = holder.address1;
-                address11.setText(propertiesdatasub.get(2));
-                TextView owner11 = holder.owner1;
-                owner11.setText(propertiesdatasub.get(3));
-                //listmainsizetracker--;
+                (holder.rent1).setText(propertiesdatasub.get(0));
+
+                holder.building1.setImageResource(R.mipmap.download);
+
+
+                holder.description1.setText(propertiesdatasub.get(1));
+                holder.address1.setText(propertiesdatasub.get(2));
+
+                holder.owner1.setText(propertiesdatasub.get(3));
             }
-//        }
-//if(listmainsizetracker>0){
-//    System.out.println(listmainsizetracker);
-//            List<String> propertiesdatasub2 = propertiesdata.get(position + 1);
-//            if (propertiesdatasub2.size() > 0) {
-//                // Set item views based on your views and data model
-//                ImageView imageviewbuilding1 = holder.building2;
-//                TextView rent2 = holder.rent2;
-//                rent2.setText(propertiesdatasub2.get(0));
-//                ImageView building12 = holder.building2;
-//                building12.setImageResource(R.mipmap.download2);
-//                TextView rent12 = holder.rent2;
-//                rent12.setText(propertiesdatasub2.get(0));
-//                TextView description12 = holder.description2;
-//                description12.setText(propertiesdatasub2.get(1));
-//                TextView address12 = holder.address2;
-//                address12.setText(propertiesdatasub2.get(2));
-//                TextView owner12 = holder.owner2;
-//                owner12.setText(propertiesdatasub2.get(3));
-//                listmainsizetracker--;
-//            }
-//        }
+        }
+if(listmainsizetracker>0){
+    System.out.println(listmainsizetracker);
+            List<String> propertiesdatasub2 = propertiesdata.get(position + 1);
+            if (propertiesdatasub2.size() > 0) {
+                // Set item views based on your views and data model
+                ImageView imageviewbuilding1 = holder.building2;
+                TextView rent2 = holder.rent2;
+                rent2.setText(propertiesdatasub2.get(0));
+                ImageView building12 = holder.building2;
+                building12.setImageResource(R.mipmap.download2);
+                TextView rent12 = holder.rent2;
+                rent12.setText(propertiesdatasub2.get(0));
+                TextView description12 = holder.description2;
+                description12.setText(propertiesdatasub2.get(1));
+                TextView address12 = holder.address2;
+                address12.setText(propertiesdatasub2.get(2));
+                TextView owner12 = holder.owner2;
+                owner12.setText(propertiesdatasub2.get(3));
+                listmainsizetracker--;
+            }
+        }
     }
 
     @Override
     public int getItemCount() {
-        return propertiesdata.size();
+        return propertiesdata.size()/2;
     }
 }
 
