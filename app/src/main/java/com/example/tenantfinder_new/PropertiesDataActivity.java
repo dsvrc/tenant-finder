@@ -2,11 +2,19 @@ package com.example.tenantfinder_new;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class PropertiesDataActivity  {
+    static FirebaseDatabase  rootNode;
+    static DatabaseReference reference;
     public static List<List<String>> method(){
+        rootNode=FirebaseDatabase.getInstance();
+        reference=rootNode.getReference().child("properties");
+
     List<List<String>> lists = new ArrayList<>();
     ArrayList<String> list=new ArrayList<String>();
         list.add("Rs 1,00,000 / Month");

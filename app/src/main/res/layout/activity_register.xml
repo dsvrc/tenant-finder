@@ -8,14 +8,16 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="306dp"
+        android:layout_height="45dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="23dp"
-        android:text="Registration"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="27dp"
+        android:text="Welcome, Register Here!!"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#230101"
         android:textSize="25dp"
         app:autoSizeMaxTextSize="50dp"
         tools:layout_editor_absoluteX="45dp"
@@ -27,11 +29,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="59dp"
-        android:layout_marginTop="99dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="132dp"
         android:text="User Name"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18dp" />
+        android:textColor="#3F51B5"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/username"
@@ -39,8 +42,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="86dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginTop="121dp"
+        android:layout_marginEnd="17dp"
         android:ems="10"
         android:hint="User Name"
         android:inputType="textPersonName" />
@@ -51,11 +54,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="197dp"
         android:text="Last Name"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18dp" />
+        android:textColor="#3F51B5"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/lastname"
@@ -63,8 +67,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="158dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginTop="191dp"
+        android:layout_marginEnd="20dp"
         android:ems="10"
         android:hint="Last Name"
         android:inputType="textPersonName" />
@@ -75,11 +79,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="63dp"
-        android:layout_marginTop="242dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="271dp"
         android:text="First Name"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18dp" />
+        android:textColor="#3F51B5"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/firstname"
@@ -87,8 +92,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="230dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginTop="262dp"
+        android:layout_marginEnd="19dp"
         android:ems="10"
         android:hint="First Name"
         android:inputType="textPersonName" />
@@ -99,11 +104,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="69dp"
-        android:layout_marginTop="388dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="403dp"
         android:text="Password"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18dp" />
+        android:textColor="#3F51B5"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/password"
@@ -112,36 +119,35 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginTop="374dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginTop="386dp"
+        android:layout_marginEnd="17dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="112dp"
+        android:layout_height="51dp"
+        android:layout_below="@+id/textView6"
         android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="14dp"
-        android:layout_marginBottom="249dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:text="Confirm Password"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18dp" />
+        android:textColor="#3F51B5"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/confirmpassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="241dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="Re-enter Password"
         android:inputType="textPersonName" />
 
     <TextView
@@ -150,11 +156,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="317dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="339dp"
         android:text="Email ID"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18dp" />
+        android:textColor="#3F51B5"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/emailid"
@@ -162,8 +169,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="302dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginTop="317dp"
+        android:layout_marginEnd="18dp"
         android:ems="10"
         android:hint="Emai ID"
         android:inputType="textPersonName" />
@@ -172,26 +179,19 @@
         android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/confirmpassword"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="169dp"
+        android:layout_marginTop="53dp"
         android:text="Register" />
 
     <TextView
         android:id="@+id/existinguser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/register"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="142dp"
-        android:text="Already an user? Login Here" />
+        android:layout_marginTop="16dp"
+        android:text="Already an user? Login Here"
+        android:textSize="16sp" />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="38dp" />
 </RelativeLayout>

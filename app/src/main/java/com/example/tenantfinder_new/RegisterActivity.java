@@ -65,21 +65,15 @@ public class RegisterActivity extends AppCompatActivity{
                     @Override
                     public void onComplete(DatabaseError error, DatabaseReference ref) {
                         System.err.println("Value was set. Error = "+error);
-                        // Or: throw error.toException();
                         if(error==null)
                         {
                             Toast.makeText(RegisterActivity.this, "Registration Successful",Toast.LENGTH_SHORT).show();
-//                            spinner.setVisibility(view.GONE);
-//                            spinner.setVisibility(view.VISIBLE);
 
                             Intent loginintent=new Intent(RegisterActivity.this,MainActivity.class);
                             startActivity(loginintent);
-
                         }
                     }
                 });
-             //   Toast.makeText(RegisterActivity.this, "Registration Successful",Toast.LENGTH_SHORT).show();
-
             }
             else
             {

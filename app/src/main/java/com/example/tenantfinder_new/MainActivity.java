@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             rootNode=FirebaseDatabase.getInstance();
             reference=rootNode.getReference().child("users");
 
-           reference.addListenerForSingleValueEvent(new ValueEventListener() {
+           reference.addValueEventListener(new ValueEventListener() {
                @Override
                public void onDataChange(@NonNull DataSnapshot snapshot) {
                    if(snapshot.child(username2).exists())
