@@ -5,64 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="188dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="16dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/addnewproperty"
         android:layout_width="172dp"
         android:layout_height="88dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="8dp"
         android:text="Add A Property"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="224dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="289dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="16dp"
         android:text="Your Listed Properties"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20dp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvownerproperties"
         android:layout_width="380dp"
-        android:layout_height="375dp"
-        android:background="@drawable/horizontallayoutbg"
+        android:layout_height="529dp"
 
+        android:background="@drawable/horizontallayoutbg"
         android:orientation="horizontal"
         android:paddingTop="21dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.918" />
+        app:layout_constraintTop_toBottomOf="@+id/addnewproperty"
+        app:layout_constraintVertical_bias="0.478" />
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="60dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="273dp"
-        android:layout_marginEnd="34dp"
-        android:text="view all"
-        android:textColor="#051467"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

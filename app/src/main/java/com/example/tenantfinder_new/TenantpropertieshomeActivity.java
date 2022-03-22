@@ -32,6 +32,7 @@ import java.util.List;
 public class TenantpropertieshomeActivity extends  RecyclerView.Adapter<TenantpropertieshomeActivity.ViewHolderchinnu> {
 
     List<List<String>> propertiesdata;
+    String side;
     int listmainsizetracker;
     public class ViewHolderchinnu extends RecyclerView.ViewHolder{
         public ImageView building1;
@@ -55,8 +56,11 @@ public class TenantpropertieshomeActivity extends  RecyclerView.Adapter<Tenantpr
         }
 
     }
-    public TenantpropertieshomeActivity(List<List<String>> PropertiesDataActivity)
+    public TenantpropertieshomeActivity(List<List<String>> PropertiesDataActivity,String side)
     {
+
+            this.side=side;
+
         propertiesdata=PropertiesDataActivity;
     }
     @Override
@@ -67,8 +71,19 @@ public class TenantpropertieshomeActivity extends  RecyclerView.Adapter<Tenantpr
         LayoutInflater inflater = LayoutInflater.from(context);
 
         // Inflate the custom layout
-        View tenantview = inflater.inflate(R.layout.activity_tenant, parent, false);
+        View tenantview;
+        if(side.equals("owner")) {
+           tenantview = inflater.inflate(R.layout.activity_ownerinsiderecycler, parent, false);
+        }
+        else if(side.equals("tenantall"))
+        {
+            tenantview = inflater.inflate(R.layout.activity_tenantproperties, parent, false);
 
+        }
+        else{
+            tenantview = inflater.inflate(R.layout.activity_tenant, parent, false);
+
+        }
         // Return a new holder instance
         ViewHolderchinnu viewHolderobject = new ViewHolderchinnu(tenantview);
         return viewHolderobject; // returns the viewHolderobject to adapter which now iteratively calls onBindViewHolder(viewHolderobject,0 to getItemCount() times) getItemCount() times.
