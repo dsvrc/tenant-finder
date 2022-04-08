@@ -28,7 +28,7 @@ public class RegisterActivity extends AppCompatActivity{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_register2);
 
         existinguser = (TextView) findViewById(R.id.existinguser);
         existinguser.setOnClickListener((view) ->
