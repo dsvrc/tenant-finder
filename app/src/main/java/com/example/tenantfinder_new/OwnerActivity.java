@@ -3,6 +3,7 @@ package com.example.tenantfinder_new;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,6 +15,8 @@ public class OwnerActivity extends AppCompatActivity {
 Button addnewproperty;
 List<List<String>> propertiesdata;
     RecyclerView rvContacts;
+    ImageView userprofile;
+
 void method2(List<List<String>> lists)
 {
     TenantpropertieshomeActivity adapterobj=new TenantpropertieshomeActivity(lists,"owner");
@@ -25,6 +28,15 @@ void method2(List<List<String>> lists)
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_owner);
         addnewproperty=(Button) findViewById(R.id.addnewproperty);
+        userprofile=(ImageView) findViewById(R.id.userprofile);
+        Intent ownerintent = getIntent();
+        String usernamee = ownerintent.getStringExtra("username");
+        userprofile.setOnClickListener((view2)->{
+            System.out.println("boo");
+            Intent userprofileintent=new Intent(OwnerActivity.this,UserprofileActivity.class);
+            userprofileintent.putExtra("username",usernamee);
+            startActivity(userprofileintent);
+        });
 
         addnewproperty.setOnClickListener((view)->
         {
