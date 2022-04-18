@@ -136,10 +136,13 @@ edit=(ImageButton) tenantview.findViewById(R.id.edit);
                     String rent = (rentfularr[1]);
                     String[] descriptionfularr = ("" + viewHolderobject.description1.getText()).split(",");
                     String furnished = descriptionfularr[0];
-//System.out.println(furnished);
+System.out.println(furnished);
+System.out.println((descriptionfularr[1]));
+
                     String bhk = ((descriptionfularr[1]).split(" ")[1]);
-                    String type = ((descriptionfularr[1]).split(" ")[3]) + " " + ((descriptionfularr[1]).split(" ")[4]);
-                    // System.out.println(type);
+                    String type = ((descriptionfularr[1]).split(" ")[3]);
+                     System.out.println(bhk);
+                     System.out.println();
 
                     String sqft = ((descriptionfularr[2]).split(" ")[1]);
                     String propertyname = (("" + viewHolderobject.owner1.getText()).split(":"))[1];
@@ -148,13 +151,13 @@ edit=(ImageButton) tenantview.findViewById(R.id.edit);
                     //System.out.println(address+" "+sqft);
 
 //System.out.println("boo"+(descriptionfularr[1]).split(" ")[1]);
-                    PropertyDataUpdate userdata = new PropertyDataUpdate(address, bhk, "Bangalore", furnished, "HSR Layout", propertyname, rent, sqft, type);
+                    PropertyDataUpdate userdata = new PropertyDataUpdate(address, bhk, "Bangalore", furnished, "HSRLayout", propertyname, rent, sqft, type);
                     System.out.println(userdata);
                     rootNode = FirebaseDatabase.getInstance();
 
                     reference = rootNode.getReference().child("properties");
 
-                    reference.child("Bangalore/HSR Layout/" + propertiesdatasub.get(5) + "/satya's house").setValue(userdata, new DatabaseReference.CompletionListener() {
+                    reference.child("Bangalore/HSRLayout/" + propertiesdatasub.get(5) + "/"+propertyname).setValue(userdata, new DatabaseReference.CompletionListener() {
                         @Override
                         public void onComplete(DatabaseError error, DatabaseReference ref) {
                             System.err.println("Value was set. Error = " + error);
