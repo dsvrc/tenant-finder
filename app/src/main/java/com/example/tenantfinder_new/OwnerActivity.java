@@ -56,7 +56,7 @@ void method2(List<List<String>> lists)
             public  void onSuccess(List<List<String>> lists2){
                 propertiesdata=lists2;
                 System.out.println(propertiesdata);
-                method2(propertiesdata);
+       method2(propertiesdata);
             }
 
         });
